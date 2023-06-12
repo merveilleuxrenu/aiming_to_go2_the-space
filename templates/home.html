@@ -7,6 +7,14 @@
      <title>INTO THE SPACE</title>
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
       <style>
+        h1{
+          padding-bottom:18px;
+          margin-bottom:16px;
+          font-size:40px;
+          font-family:monoton;
+          color:blueviolet;
+          font-weight:bold;
+        }
         
           #imgsize
           {
@@ -20,35 +28,67 @@
     <body>
       <div class = "container">
         <div class="text-center">
-         <h1 class="fs-1" style="color:blueviolet" > INTO THE SPACE</h1>
+         <h2 class="fs-1" style="color:blueviolet;font-family:monoton;" > INTO THE SPACE</h2>
           
-          <p class="fw-bold" style="color:royalblue"> 
+          <p class="fw-bold" style="color:royalblue;font-size:25px"> 
         let's explore into space and see what's up there. 
-        Prepare yourself for this collasal trip!!
+        Prepare yourself for this colossal trip!!
           </p>
         
-       <button type="button" class="btn btn-info">explore</button>
+      
           <img  class = "img-fluid" id="imgsize" src="https://aimingtogo2the-space--merveilleuxrenu.repl.co/static/space.jpg">
+           <h1>
+           Things After BIGBANG!!
+          </h1>
           <h2 class="fs-2" style="color:blueviolet">
            GALAXIES-let's spin with it, shall we?
           
           </h2 >
           <img  class = "img-fluid" id="imgsize" src="https://aimingtogo2the-space--merveilleuxrenu.repl.co/static/galxy.jpg">
-         
-          <p >
+         <div  class="lead"  style="padding-bottom:8px;">
+          <p>
             Explore the tapestry of the cosmos, where stars ignite and galaxies dance. Galaxies, those celestial marvels, beckon us to witness their grandeur. Within their spiral arms and elliptical embrace, secrets of the universe unfold.
 
 Galaxies, vast and timeless, are cosmic metropolises of stars. They dazzle with their kaleidoscope of colors and ignite our imaginations. Each galaxy is a cosmic symphony, an ensemble of billions of stars harmonizing in the vast expanse.
+    </p>
 
-Embark on a cosmic odyssey, traversing the Milky Way and beyond. Discover the spiral majesty of Andromeda, the radiant brilliance of the Whirlpool, or the mystique of the Sombrero. Witness the birth of stars in interstellar nurseries, and marvel at the colossal black holes that shape these cosmic realms.
-
-Galaxies are the keepers of secrets, holding clues to the origins of our universe. From the graceful dance of galactic collisions to the enigmatic dark matter that binds them, they whisper tales of cosmic evolution that captivate our minds.
-
-So, gaze up at the starry tapestry above, and let your curiosity soar. Galaxies, the celestial wonders, invite you to embark on an extraordinary journey through the vastness of space, where mysteries await and awe awaits your embrace.
-          </p>
-        </div>
-      </div> 
+  <h1>Planets - We can live, but we can't </h1>
+    <img  class = "img-fluid" id="imgsize" src="https://aimingtogo2the-space--merveilleuxrenu.repl.co/static/planets.jpg">
+        <p>
+          Mysterious and enchanting, the planets dance in celestial harmony, like cosmic jewels adorning the velvet cloak of the universe.
+          Planets, the celestial protagonists of our cosmic theater, enthrall us with their diverse landscapes, mysterious atmospheres, and the promise of extraterrestrial life.
+          From fiery Mars to majestic Jupiter, each planet tells a unique story, painting the cosmos with vibrant hues of wonder.
+          Lost in the vastness of space, these celestial orbs paint a celestial ballet, a mesmerizing display of cosmic artistry that reminds us of the wonders beyond our own backyard.
+        </p>
+        <h1>Discover the Cosmic Spectacle: Nebulae Unveiled!</h1>
+        <img  class = "img-fluid" id="imgsize" src="https://aimingtogo2the-space--merveilleuxrenu.repl.co/static/nebula.jpg">  
+        <p>
+          Dive into the celestial tapestry where colors swirl and stars are born. Nebulae, those captivating clouds of cosmic beauty, beckon with their enchanting allure. Immerse yourself in these celestial masterpieces that paint the universe with their radiant hues.
+          Marvel at the stellar nurseries, where mighty stars are birthed amidst the vibrant chaos. Nebulae, the celestial cradles of creation, foster the genesis of dazzling worlds, sparking awe and wonder in those who dare to gaze upon their majesty.
+        </p>
       </div>
+      
+     <h1> To expore more?, Click on the button!</h1>
+    </div>
+     </div> 
+      {% for items in item %}
+        <div class="row" style="padding-bottom:8px;margin- 
+               bottom:16px;">
+          <div class="col-md-3 offset-md-3">
+            <h3 style="font-size:30px; color:blueviolet;">
+              {{items["name"]}}
+            </h3>
+            <div class="lead">
+              {{items["desc"]}}
+            </div>
+          </div>
+          <div class="col-md-3 offset-md-3">
+           <button type="button" class="btn btn-info">explore</button>
+          </div>
+        </div>
+       {% endfor %}
+    </div>
+      
     </body>
   </html>
       
